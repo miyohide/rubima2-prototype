@@ -1,0 +1,8 @@
+- name: ホーム
+  link: /
+- name: 最新号
+  link: /latest.html
+- name: 過去記事
+  link: /past_articles.html
+- name: 分類別過去記事
+  link: /categories.html

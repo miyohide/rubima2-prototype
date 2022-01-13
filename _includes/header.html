@@ -1,3 +1,16 @@
 <header>
-  ヘッダー
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:brown">
+    <a href="{{ '/' | relative_url }}" class="navbar-brand">るびま2</a>
+    <div id="navbarNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        {% for item in site.data.navi %}
+          <li class="navbar-item">
+            <a href="{{ item.link | relative_url }}" class={% if page.url == item.link %}"nav-link active"{% else %}"nav-link"{% endif %}>
+              {{ item.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>  
+    </div>  
+  </nav>
 </header>

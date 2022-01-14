@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:brown">
     <a href="{{ '/' | relative_url }}" class="navbar-brand">るびま2</a>
     <div id="navbarNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav me-auto">
         {% for item in site.data.navi %}
           <li class="navbar-item">
             <a href="{{ item.link | relative_url }}" class={% if page.url == item.link %}"nav-link active"{% else %}"nav-link"{% endif %}>
@@ -11,6 +11,11 @@
           </li>
         {% endfor %}
       </ul>  
+      <ul class="navbar-nav">
+        <li class="navbar-item">
+          <a href="#" class="nav-link">右端メニュー</a>
+        </li>
+      </ul>
     </div>  
   </nav>
 </header>

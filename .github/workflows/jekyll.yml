@@ -13,3 +13,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1.92.0
+    - name: Exec jekyll build
+      run: bundle exec jekyll build

@@ -1,21 +1,23 @@
 <header>
   <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:brown">
-    <a href="{{ '/' | relative_url }}" class="navbar-brand">るびま2</a>
-    <div id="navbarNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto">
-        {% for item in site.data.navi %}
+    <div class="container-fluid">
+      <a href="{{ '/' | relative_url }}" class="navbar-brand">るびま2</a>
+      <div id="navbarNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          {% for item in site.data.navi %}
+            <li class="navbar-item">
+              <a href="{{ item.link | relative_url }}" class="{% navbar_item_class item.link %}">
+                {{ item.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>  
+        <ul class="navbar-nav">
           <li class="navbar-item">
-            <a href="{{ item.link | relative_url }}" class="{% navbar_item_class item.link %}">
-              {{ item.name }}
-            </a>
+            <a href="#" class="nav-link">右端メニュー</a>
           </li>
-        {% endfor %}
-      </ul>  
-      <ul class="navbar-nav">
-        <li class="navbar-item">
-          <a href="#" class="nav-link">右端メニュー</a>
-        </li>
-      </ul>
-    </div>  
+        </ul>
+      </div>  
+    </div>
   </nav>
 </header>

@@ -1,0 +1,19 @@
+name: Jekyll site CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1.92.0
+      with:
+        bundler-cache: true
+    - name: Exec jekyll build
+      run: bundle exec jekyll build
